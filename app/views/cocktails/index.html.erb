@@ -1,0 +1,12 @@
+<h1>All My Cocktails</h1>
+
+
+<p>There are currently <%= Cocktail.count %> cocktails referenced here.</p>
+<p>Click on a cocktail to see its ingredients and doses.</p>
+
+<ul>
+  <% @cocktails.each do |cocktail|%>
+    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+  <% end %>
+</ul>
+
