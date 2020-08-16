@@ -11,7 +11,7 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to @cocktail
     else
-      render 'cocktails/show'
+      render :new
     end
   end
 
